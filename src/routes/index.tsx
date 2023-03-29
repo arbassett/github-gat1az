@@ -6,7 +6,7 @@ import { client } from '~/lib/trpc';
 export default function Home() {
   const [trpcRes, setTrpcRes] = createSignal('');
   onMount(async () => {
-    const res = await client.hello.query('test');
+    const res = await client.nestedRouter.nested.nestedHello.query('trpc');
     console.log(res);
     setTrpcRes(res);
   });
