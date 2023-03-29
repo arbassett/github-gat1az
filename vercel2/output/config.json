@@ -1,0 +1,23 @@
+{
+  "version": 3,
+  "routes": [
+    {
+      "src": "/assets/(.*)",
+      "headers": {
+        "Cache-Control": "public, max-age=31556952, immutable"
+      },
+      "continue": true
+    },
+    {
+      "handle": "filesystem"
+    },
+    {
+      "src": "/api/trpc/(?<trpc>.*)",
+      "dest": "/api"
+    },
+    {
+      "src": "/.*",
+      "dest": "/render"
+    }
+  ]
+}

@@ -1,0 +1,5 @@
+{
+  "runtime": "nodejs16.x",
+  "handler": "home/projects/github-gat1az/dist/index.cjs",
+  "launcherType": "Nodejs"
+}
